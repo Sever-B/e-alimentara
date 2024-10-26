@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/7511/7511667.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/7511/7511667.png"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-alimentara</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
     <div class="container">
       <div class="navbar flex-row bg-white justify-around items-center">
         <div class="logo">
@@ -20,15 +23,43 @@
           </a>
         </div>
         <div class="nav-links">
-          <a href="admin.html"
-            ><i class="fa-solid fa-user-secret"></i> Admin</a
-          >
-          <a href="cart.html"
-            ><i class="fa-solid fa-cart-shopping"></i> Cart</a
-          >
+          <a href="admin.html"><i class="fa-solid fa-user-secret"></i> Admin</a>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
         </div>
       </div>
-      
+      <form id="product-form">
+        <div>
+          <label for="name">Product name</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input type="text" id="price" />
+        </div>
+        <div>
+          <label for="image-url">Image URL</label>
+          <input type="text" id="image-url" />
+        </div>
+        <div>
+          <label for="details">Details</label>
+          <input type="text" id="details" />
+        </div>
+        <button id="save-btn">Save product</button>
+      </form>
+      <table id="products-table" border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
+    <script type="module" src="../js/admin.js"></script>
   </body>
 </html>
